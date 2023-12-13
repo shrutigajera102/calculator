@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>SIMPLE CALCULATOR</h1>
+        Enter opration (+,-,*./) : <input id="operator" type="text"><br>
+        Enter first number : <input id="num1" type="text"><br>
+        Enter second number : <input id="num2" type="text"><br>
+        <button class="bt" onclick="calculate()">calculate</button>
+        <h2 id="result"></h2>
+    </div>
+    <script>
+        function calculate() {
+            var operator = document.getElementById("operator").value;
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html> 
+
